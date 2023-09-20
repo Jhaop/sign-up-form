@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <div class="img-container">
+        <div class="logo">
+            <div class="img">
+                <img src="/odin-lined.png" alt="Odin Project Logo">
+            </div>
+            ODIN
+        </div>
+        <p>Photo by <a href="https://unsplash.com/@musaortac">Musa Ortaç</a>
+        on <a href="https://unsplash.com/">Unsplash</a></p>
+    </div>
+    <div class="form-container">
+        <div class="header">
+            <h1>This is not a real online service! You know you need something
+                like this in your life to help you realize your deepest dreams.
+                <br><br>
+                You <em>know</em> you want to.
+            </h1>
+        </div>
+        <div class="form-body">
+            <h2>Let's do this!</h2>
+            <form action="" id="myform" onsubmit="return validateForm()">  
+                <div class="input-container">            
+                    <label for="first-name">*FIRST NAME</label>
+                    <input type="text" class="onfcs" id="first-name" name="first-name" pattern="[A-Za-z ]{1,32}" required>
+                    <span id="fn-error">First name cannot contain numbers or symbols</span>
+                </div> 
+                <div class="input-container"> 
+                    <label for="last-name">*LAST NAME</label>
+                    <input type="text" class="onfcs" id="last-name" name="last-name" pattern="[A-Za-z ]{1,32}" required>
+                    <span id="ln-error">Last name cannot contain numbers or symbols</span>
+                </div> 
+                <div class="input-container"> 
+                    <label for="email">*EMAIL</label>
+                    <input type="email" class="onfcs" id="email" name="email" required>
+                </div> 
+                <div class="input-container"> 
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="text" class="onfcs" id="phone" name="phone">
+                </div> 
+                <div class="input-container"> 
+                    <label for="password">*PASSWORD</label>
+                    <input type="password" class="pw onfcs" id="password" name="password" required>
+                </div> 
+                <div class="input-container"> 
+                    <label for="password-confirm">*CONFIRM PASSWORD</label>
+                    <input type="password" class="pw onfcs" id="password-confirm" name="password-confirm" required>
+                    <span id="pw-error">Passwords do not match</span>
+                </div> 
+                </form>
+        </div>
+        <div class="footer">
+            <button type="submit" form="myform">Create account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
